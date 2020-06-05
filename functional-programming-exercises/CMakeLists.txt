@@ -12,3 +12,4 @@ add_executable(exercise5 exercise5.cpp country.h country.cpp city.h city.cpp wor
 add_executable(exercise6 exercise6.cpp country.h country.cpp city.h city.cpp world-util.h world-util.cpp)
 add_executable(exercise7 exercise7.cpp country.h country.cpp city.h city.cpp world-util.h world-util.cpp)
 add_executable(exercise8 exercise8.cpp country.h country.cpp city.h city.cpp world-util.h world-util.cpp)
+add_executable(study-ranges study-ranges.cpp country.h country.cpp city.h city.cpp world-util.h world-util.cpp)

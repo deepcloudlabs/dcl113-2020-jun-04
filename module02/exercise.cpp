@@ -13,9 +13,10 @@ void
 print_person(person_t &person) {
     person.print(std::cout, person_t::name_only);
 }
-
+auto counter = 0;
 std::string
 person_to_name_mapper(const person_t &person) {
+    counter++; // side effect
     return person.name();
 }
 
@@ -48,6 +49,7 @@ int main(int argc, char *argv[]) {
     std::copy_if(people.cbegin(), people.cend(), std::back_inserter(females), is_female);
     std::for_each(females.begin(), females.end(), print_person);
     std::vector<std::string> female_names(females.size());
+    // internal loop
     std::transform(std::execution::par, females.cbegin(), females.cend(), female_names.begin(), person_to_name_mapper);
     std::for_each(females.begin(), females.end(), transform_person);
     std::for_each(std::execution::par, female_names.begin(), female_names.end(), print_names);
