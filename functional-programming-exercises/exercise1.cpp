@@ -52,6 +52,6 @@ int main(int argc, char* argv[]){
             surface_area_reducer
 	        );
 	cout << "\n Total surface area: " << totalSurfaceArea << "\n" ;
-	auto values = countries.
+
 	return 0;
 }
